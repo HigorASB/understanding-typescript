@@ -31,3 +31,9 @@ let user: {
     id: 5,
   },
 };
+
+let val: {} = "is a value"; //Any value not null is accepted
+
+let data: Record<string, number | string>;
+
+data = { entry1: "value", entry2: 1 };
