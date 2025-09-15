@@ -1,9 +1,19 @@
-var Role;
-(function (Role) {
-    Role[Role["Admin"] = 0] = "Admin";
-    Role[Role["Editor"] = 1] = "Editor";
-    Role[Role["Guest"] = 2] = "Guest";
-})(Role || (Role = {}));
+// enum Role {
+//   Admin,
+//   Editor,
+//   Guest,
+// }
+// let userRole: "Admin" | "Editor" | "Guest";
 var userRole;
-userRole = Role.Admin;
-console.log(Role);
+userRole = "Editor";
+var possibleResults; // [1, -1]
+possibleResults = [1, -1];
+function access(role) {
+  if (role === "Admin") {
+    console.log("Access granted.");
+    return;
+  }
+  console.log("Access denied.");
+}
+access("Admin");
+access("Guest");
